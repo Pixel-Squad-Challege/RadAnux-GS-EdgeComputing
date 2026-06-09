@@ -2,10 +2,13 @@
 
 
 📖 Descrição do Projeto
+
+
 O Rad Anux é uma plataforma de testes focada em software aeroespacial adaptada para o ambiente de microcontroladores. O projeto simula o impacto físico da radiação cósmica em componentes eletrônicos comerciais (CubeSats), especificamente o fenômeno conhecido como Single Event Upset (SEU) ou Bit-Flip, que causa a corrupção de variáveis críticas em memória.
 
 
 🎯 Objetivo da Solução
+
 O objetivo principal é criar um "Satélite de Bancada" que permita aos engenheiros testar algoritmos de auto-recuperação (redundância) contra falhas de hardware antes do lançamento. A solução automatiza e democratiza os testes de resiliência espacial de forma barata e ágil, evitando falhas catastróficas em órbita que poderiam custar milhões.
 
 
