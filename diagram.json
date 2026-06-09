@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "author": "Evandro Marcondes",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 246.6, "left": 137.2, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -18.6, "left": 143.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 142.7, "left": -9.8, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 303.8,
+      "left": 278.4,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -138, "left": 282.2, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -118.8,
+      "left": 224.6,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 188.8,
+      "left": 504.8,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 291.4,
+      "left": 392.75,
+      "rotate": 270,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 291.4,
+      "left": 411.95,
+      "rotate": 270,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:tp.1", "red", [ "v57.5", "h-130.6" ] ],
+    [ "uno:GND.2", "bb1:tn.1", "black", [ "v38.3", "h-188.1", "v57.6" ] ],
+    [ "bb1:tp.3", "lcd1:VCC", "gold", [ "v-18.9", "h289.6", "v-9.6" ] ],
+    [ "lcd1:GND", "bb1:tn.3", "gold", [ "h-288", "v48" ] ],
+    [ "lcd1:SDA", "uno:A4", "gold", [ "h-19.2", "v-57.4", "h-96" ] ],
+    [ "lcd1:SCL", "uno:A5", "gold", [ "h-28.8", "v-57.3", "h-76.8" ] ],
+    [ "bb1:tp.7", "pot1:VCC", "green", [ "v19.5", "h-180.8" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v19.2", "h86", "v-38.4", "h240" ] ],
+    [ "pot1:GND", "bb1:tn.8", "black", [ "v76.8", "h228.8" ] ],
+    [ "btn1:1.l", "bb1:13t.c", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:13t.e", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:20t.c", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:20t.e", "", [ "$bb" ] ],
+    [ "btn1:1.l", "bb1:tn.10", "violet", [ "h0" ] ],
+    [ "btn1:2.l", "uno:2", "green", [ "h0", "v19.4", "h537.6", "v-403.2", "h-432" ] ],
+    [ "led2:A", "uno:8", "green", [ "v48", "h76.8", "v9.6" ] ],
+    [ "r1:1", "bb1:28t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:tn.23", "", [ "$bb" ] ],
+    [ "r1:1", "led2:C", "green", [ "h0", "v86.4", "h-451.2", "v-451.2" ] ],
+    [ "led1:A", "uno:9", "green", [ "v0" ] ],
+    [ "r2:1", "bb1:30t.d", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:tn.25", "", [ "$bb" ] ],
+    [ "led1:C", "r2:1", "green", [ "v48", "h-306.8", "v480", "h28.8" ] ]
+  ],
+  "dependencies": {}
+}
