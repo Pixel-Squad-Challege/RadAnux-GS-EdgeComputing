@@ -3,7 +3,6 @@
 
 📖 Descrição do Projeto
 
-
 O Rad Anux é uma plataforma de testes focada em software aeroespacial adaptada para o ambiente de microcontroladores. O projeto simula o impacto físico da radiação cósmica em componentes eletrônicos comerciais (CubeSats), especificamente o fenômeno conhecido como Single Event Upset (SEU) ou Bit-Flip, que causa a corrupção de variáveis críticas em memória.
 
 
@@ -13,6 +12,7 @@ O objetivo principal é criar um "Satélite de Bancada" que permita aos engenhei
 
 
 🔌 Componentes Utilizados (Simulador)
+
 1x Arduino Uno R3 (Representando o Computador de Bordo)
 
 1x Display LCD 16x2 I2C (Dashboard de Monitoramento)
@@ -29,12 +29,14 @@ Jumpers e Protoboard
 
 
 ⚙️ Explicação do Funcionamento
+
 O sistema inicia no modo de configuração, onde o usuário ajusta um potenciômetro para definir o "Fator k" (nível de radiação da órbita, de 1% a 10%). Ao pressionar o botão de início, o Arduino inicia a simulação de voo rastreando uma variável crítica (Altitude). O Rad Anux então força um Bit-Flip matemático nessa variável, simulando o impacto da radiação.
 
 O software tenta se auto-corrigir buscando o dado em um registro de redundância. Se o nível de radiação configurado for tolerável, o sistema se recupera (LED Verde) e gera um Score de Resiliência alto. Se a radiação for extrema, o sistema sofre um Crash (LED Vermelho), e o Score cai drasticamente.
 
 
 🏗️ Estrutura do Circuito
+
 O circuito foi desenhado para facilitar a interação e leitura:
 
 Display I2C: Pinos A4 (SDA) e A5 (SCL) para comunicação de dados.
@@ -47,6 +49,7 @@ Feedback Visual: LEDs Verde (Pino 8) e Vermelho (Pino 9).
 
 
 ▶️ Instruções de Execução
+
 Acesse o link do simulador Wokwi: https://wokwi.com/projects/466312381784302593
 
 Clique no botão de "Play" (Start Simulation).
@@ -59,6 +62,7 @@ Observe o alerta de falha no LCD e verifique se o sistema acenderá o LED Verde 
 
 
 👥 Nome Completo dos Integrantes do Grupo
+
 Pedro Marques - RM: 569307
 
 Evandro Marcondes - RM: 572473
@@ -71,4 +75,5 @@ Raphael de Oliveira - RM: 571065
 
 
 🔗 Passo 4: O Link do Wokwi
+
 Não se esqueça de substituir o https://wokwi.com/projects/466312381784302593 no texto acima pelo link real do seu projeto. Para pegar esse link no Wokwi, basta clicar em "Share" (no menu superior) e copiar a URL fornecida.
